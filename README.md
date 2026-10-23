@@ -37,10 +37,21 @@ npm ci
 npm run dev
 ```
 
-## Checks (same as CI)
+## Checks
 ```bash
 npm run lint
 npm run typecheck
-npm test
+npm test           # node:test: note parsing/dates and the MCP handler
 npm run build
 ```
+
+CI (`.github/workflows/ci.yml`) runs the shared Node workflow (lint, typecheck, tests, build) and the shared security
+scan on every push and PR to `main`.
+
+## Status
+
+Experiment. The portfolio card review (2026-10) marks it Live→Experiment: three sample MDX notes, no completion
+status, not the "50+ courses" once claimed. Recommended for archive (owner decision, nothing archived); it is kept at
+the L1 baseline only (shared CI, lockfile, no hidden errors).
+
+Live: https://coursenotes.bookchaowalit.com (deployed by Vercel CLI from an old Git link; a push does not deploy).
